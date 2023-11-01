@@ -16,16 +16,9 @@ int main(void) {
 
 	scanf_s("%s", playerOne, MAXLEN);
 
-	if (strlen(playerOne) > MAXLEN) {
+	if (strcmp(playerOne, "rock") != 0 && strcmp(playerOne, "scissors") != 0 && strcmp(playerOne, "paper") != 0) {
 
-		fprintf(stderr, "\n\nERROR: Char not within range.\n\n");
-
-		return 1;
-
-	}
-	else if (strcmp(playerOne, "rock") != 0 && strcmp(playerOne, "scissors") != 0 && strcmp(playerOne, "paper") != 0) {
-
-		fprintf(stderr, "\n\nERROR: Not a char option.\n\n");
+		fprintf(stderr, "\n\nERROR: Not a valid option.\n\n");
 
 		return 1;
 
@@ -34,18 +27,10 @@ int main(void) {
 	printf("Player two's turn: (choose between rock, paper or scissors)\n");
 
 	scanf_s("%s", playerTwo, MAXLEN);
+	
+	if (strcmp(playerTwo, "rock") != 0 && strcmp(playerTwo, "scissors") != 0 && strcmp(playerTwo, "paper") != 0) {
 
-
-	if (strlen(playerTwo) > MAXLEN) {
-
-		fprintf(stderr, "\n\nERROR: Char not within range.\n\n");
-
-		return 1;
-
-	}
-	else if (strcmp(playerTwo, "rock") != 0 && strcmp(playerTwo, "scissors") != 0 && strcmp(playerTwo, "paper") != 0) {
-
-		fprintf(stderr, "\n\nERROR: Not a char option.\n\n");
+		fprintf(stderr, "\n\nERROR: Not a valid option.\n\n");
 
 		return 1;
 
