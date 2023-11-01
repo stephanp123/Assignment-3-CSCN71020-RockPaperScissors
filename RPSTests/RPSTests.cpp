@@ -20,7 +20,7 @@ namespace RPSTests
 
 			char* playerTwo = "rock";
 
-			char* expected = "DRAW!";
+			char* expected = "Draw";
 
 			char* actual = RPSoption(playerOne, playerTwo);
 
@@ -34,7 +34,7 @@ namespace RPSTests
 
 			char* playerTwo = "scissors";
 
-			char* expected = "DRAW!";
+			char* expected = "Draw";
 
 			char* actual = RPSoption(playerOne, playerTwo);
 
@@ -48,7 +48,7 @@ namespace RPSTests
 
 			char* playerTwo = "paper";
 
-			char* expected = "DRAW!";
+			char* expected = "Draw";
 
 			char* actual = RPSoption(playerOne, playerTwo);
 
@@ -62,7 +62,7 @@ namespace RPSTests
 
 			char* playerTwo = "paper";
 
-			char* expected = "PLAYER 2 WINS!";
+			char* expected = "Player2";
 
 			char* actual = RPSoption(playerOne, playerTwo);
 
@@ -76,7 +76,7 @@ namespace RPSTests
 
 			char* playerTwo = "rock";
 
-			char* expected = "PLAYER 1 WINS!";
+			char* expected = "Player1";
 
 			char* actual = RPSoption(playerOne, playerTwo);
 
@@ -90,7 +90,7 @@ namespace RPSTests
 
 			char* playerTwo = "paper";
 
-			char* expected = "PLAYER 1 WINS!";
+			char* expected = "Player1";
 
 			char* actual = RPSoption(playerOne, playerTwo);
 
@@ -104,7 +104,7 @@ namespace RPSTests
 
 			char* playerTwo = "scissors";
 
-			char* expected = "PLAYER 2 WINS!";
+			char* expected = "Player2";
 
 			char* actual = RPSoption(playerOne, playerTwo);
 
@@ -118,7 +118,7 @@ namespace RPSTests
 
 			char* playerTwo = "scissors";
 
-			char* expected = "PLAYER 1 WINS!";
+			char* expected = "Player1";
 
 			char* actual = RPSoption(playerOne, playerTwo);
 
@@ -132,7 +132,7 @@ namespace RPSTests
 
 			char* playerTwo = "rock";
 
-			char* expected = "PLAYER 2 WINS!";
+			char* expected = "Player2";
 
 			char* actual = RPSoption(playerOne, playerTwo);
 
@@ -144,7 +144,7 @@ namespace RPSTests
 
 			char* playerOne = "Rock" "ROCK";
 
-			char* expected = "ERROR: Not a valid option.";
+			char* expected = "Invalid";
 
 			char* actual = inputErrP1(playerOne);
 
@@ -156,7 +156,7 @@ namespace RPSTests
 
 			char* playerOne = "Paper" "PAPER";
 
-			char* expected = "ERROR: Not a valid option.";
+			char* expected = "Invalid";
 
 			char* actual = inputErrP1(playerOne);
 
@@ -168,7 +168,7 @@ namespace RPSTests
 
 			char* playerOne = "Scissors" "SCISSORS";
 
-			char* expected = "ERROR: Not a valid option.";
+			char* expected = "Invalid";
 
 			char* actual = inputErrP1(playerOne);
 
@@ -180,7 +180,7 @@ namespace RPSTests
 
 			char* playerTwo = "Paper" "PAPER";
 
-			char* expected = "ERROR: Not a valid option.";
+			char* expected = "Invalid";
 
 			char* actual = inputErrP2(playerTwo);
 
@@ -192,7 +192,7 @@ namespace RPSTests
 
 			char* playerTwo = "Rock" "ROCK";
 
-			char* expected = "ERROR: Not a valid option.";
+			char* expected = "Invalid";
 
 			char* actual = inputErrP2(playerTwo);
 
@@ -204,7 +204,55 @@ namespace RPSTests
 
 			char* playerTwo = "Scissors" "SCISSORS";
 
-			char* expected = "ERROR: Not a valid option.";
+			char* expected = "Invalid";
+
+			char* actual = inputErrP2(playerTwo);
+
+			Assert::AreEqual(expected, actual);
+
+		}
+		TEST_METHOD(invalid_input_from_player1_misc_word_expected_ERRORmsg)
+		{
+
+			char* playerOne = "Car";
+
+			char* expected = "Invalid";
+
+			char* actual = inputErrP2(playerOne);
+
+			Assert::AreEqual(expected, actual);
+
+		}
+		TEST_METHOD(invalid_input_from_player2_misc_word_expected_ERRORmsg)
+		{
+
+			char* playerTwo = "Car";
+
+			char* expected = "Invalid";
+
+			char* actual = inputErrP2(playerTwo);
+
+			Assert::AreEqual(expected, actual);
+
+		}
+		TEST_METHOD(invalid_input_from_player1_no_word_expected_ERRORmsg)
+		{
+
+			char* playerOne = "";
+
+			char* expected = "Invalid";
+
+			char* actual = inputErrP2(playerOne);
+
+			Assert::AreEqual(expected, actual);
+
+		}
+		TEST_METHOD(invalid_input_from_player2_no_word_expected_ERRORmsg)
+		{
+
+			char* playerTwo = "";
+
+			char* expected = "Invalid";
 
 			char* actual = inputErrP2(playerTwo);
 

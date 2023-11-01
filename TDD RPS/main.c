@@ -7,15 +7,17 @@
 
 #define MAXLEN 10
 
+// function determining draw and winner
+
 char* RPSoption(char* playerOne, char* playerTwo) {
 
-	if (strcmp(playerOne, playerTwo) == 0) {
+	if (strcmp(playerOne, playerTwo) == 0) { // if statement for draw 
 
-		printf("\n\nDRAW!\n\n");
+		printf("\n\nDraw\n\n");
 
-		return "DRAW!";
+		return "Draw";
 
-	} else if (
+	} else if ( // if statement for all options
 
 			(strcmp(playerOne, "rock") == 0 && strcmp(playerTwo, "scissors") == 0) ||
 			(strcmp(playerOne, "paper") == 0 && strcmp(playerTwo, "rock") == 0) ||
@@ -23,16 +25,16 @@ char* RPSoption(char* playerOne, char* playerTwo) {
 		
 		) {
 
-			printf("\n\nPLAYER 1 WINS!\n\n");
+			printf("\n\nPlayer1\n\n");
 
-			return "PLAYER 1 WINS!";
+			return "Player1";
 
 		}
 		else {
 
-			printf("\n\nPLAYER 2 WINS!\n\n");
+			printf("\n\nPlayer2\n\n");
 
-			return "PLAYER 2 WINS!";
+			return "Player2";
 
 		}
 
@@ -40,13 +42,13 @@ char* RPSoption(char* playerOne, char* playerTwo) {
 
 }
 
-char* inputErrP1(char* playerOne) {
+char* inputErrP1(char* playerOne) { // error checking for invalid input function 1
 
 	if (strcmp(playerOne, "rock") != 0 && strcmp(playerOne, "scissors") != 0 && strcmp(playerOne, "paper") != 0) {
 
-		fprintf(stderr, "\n\nERROR: Not a valid option.\n\n");
+		fprintf(stderr, "\n\nInvalid\n\n");
 
-		return "ERROR: Not a valid option.";
+		return "Invalid";
 
 	}
 
@@ -54,13 +56,13 @@ char* inputErrP1(char* playerOne) {
 
 }
 
-char* inputErrP2(char* playerTwo) {
+char* inputErrP2(char* playerTwo) { // error checking for invalid input function 2
 
 	if (strcmp(playerTwo, "rock") != 0 && strcmp(playerTwo, "scissors") != 0 && strcmp(playerTwo, "paper") != 0) {
 
-		fprintf(stderr, "\n\nERROR: Not a valid option.\n\n");
+		fprintf(stderr, "\n\nInvalid\n\n");
 
-		return "ERROR: Not a valid option.";
+		return "Invalid";
 
 	}
 
@@ -68,7 +70,7 @@ char* inputErrP2(char* playerTwo) {
 
 }
 
-int main(void) {
+int main(void) { // main function with print statments and above functions call
 
 	char playerOne[MAXLEN];
 
