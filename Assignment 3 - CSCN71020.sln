@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TDD RPS", "TDD RPS\TDD RPS.vcxproj", "{C6B361F6-2886-4ED1-9570-525962E24558}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPSTests", "RPSTests\RPSTests.vcxproj", "{EED315BE-3E8A-4316-B30E-BE3E7636826B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{C6B361F6-2886-4ED1-9570-525962E24558}.Release|x64.Build.0 = Release|x64
 		{C6B361F6-2886-4ED1-9570-525962E24558}.Release|x86.ActiveCfg = Release|Win32
 		{C6B361F6-2886-4ED1-9570-525962E24558}.Release|x86.Build.0 = Release|Win32
+		{EED315BE-3E8A-4316-B30E-BE3E7636826B}.Debug|x64.ActiveCfg = Debug|x64
+		{EED315BE-3E8A-4316-B30E-BE3E7636826B}.Debug|x64.Build.0 = Debug|x64
+		{EED315BE-3E8A-4316-B30E-BE3E7636826B}.Debug|x86.ActiveCfg = Debug|Win32
+		{EED315BE-3E8A-4316-B30E-BE3E7636826B}.Debug|x86.Build.0 = Debug|Win32
+		{EED315BE-3E8A-4316-B30E-BE3E7636826B}.Release|x64.ActiveCfg = Release|x64
+		{EED315BE-3E8A-4316-B30E-BE3E7636826B}.Release|x64.Build.0 = Release|x64
+		{EED315BE-3E8A-4316-B30E-BE3E7636826B}.Release|x86.ActiveCfg = Release|Win32
+		{EED315BE-3E8A-4316-B30E-BE3E7636826B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
