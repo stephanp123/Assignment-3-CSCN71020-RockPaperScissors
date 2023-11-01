@@ -1,9 +1,50 @@
 #include <stdio.h>
 #include <String.h>
+#include <stdbool.h>
 
 #define MAXLEN 10
 #define _CRT_SECURE_NO_WARNINGS
 
+
+bool RPSEqual(char playerOne[MAXLEN], char playerTwo[MAXLEN]) {
+
+	if (strcmp(playerOne, playerTwo) == 0) {
+
+		printf("\n\nDRAW!\n\n");
+
+		return true;
+
+	}
+	
+	return false;
+}
+
+int RPSoption(char playerOne[MAXLEN], char playerTwo[MAXLEN]) {
+
+	if (
+
+		(strcmp(playerOne, "rock") == 0 && strcmp(playerTwo, "scissors") == 0) ||
+		(strcmp(playerOne, "paper") == 0 && strcmp(playerTwo, "rock") == 0) ||
+		(strcmp(playerOne, "scissors") == 0 && strcmp(playerTwo, "paper") == 0)
+
+		) {
+
+		printf("\n\nPLAYER 1 WINS!\n\n");
+
+		return 0;
+
+	}
+	else {
+
+		printf("\n\nPLAYER 2 WINS!\n\n");
+
+		return 0;
+
+	}
+
+	return 0;
+
+}
 
 int main(void) {
 
@@ -35,30 +76,17 @@ int main(void) {
 		return 1;
 
 	}
-
 	
-	if (strcmp(playerOne, playerTwo) == 0) {
-
-		printf("\n\nDRAW!\n\n");
+	if (RPSEqual(playerOne, playerTwo)) {
 
 		return 0;
 
 	}
-	else if (
-
-		(strcmp(playerOne, "rock") == 0 && strcmp(playerTwo, "scissors") == 0) ||
-		(strcmp(playerOne, "paper") == 0 && strcmp(playerTwo, "rock") == 0) ||
-		(strcmp(playerOne, "scissors") == 0 && strcmp(playerTwo, "paper") == 0)
-
-		) { 
-		
-		printf("\n\nPLAYER 1 WINS!\n\n");
-
-	}
 	else {
+		
+		RPSoption(playerOne, playerTwo);
 
-		printf("\n\nPLAYER 2 WINS!\n\n");
-
+		return 0;
 	}
 
 	return 0;
