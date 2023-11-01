@@ -1,46 +1,35 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <String.h>
 #include <stdbool.h>
+#include "main.h"
 
 #define MAXLEN 10
-#define _CRT_SECURE_NO_WARNINGS
 
 
-bool RPSEqual(char playerOne[MAXLEN], char playerTwo[MAXLEN]) {
+char* RPSoption(char* playerOne, char* playerTwo) {
 
 	if (strcmp(playerOne, playerTwo) == 0) {
 
 		printf("\n\nDRAW!\n\n");
 
-		return true;
+	} else if (
 
-	}
-	
-	return false;
-}
+			(strcmp(playerOne, "rock") == 0 && strcmp(playerTwo, "scissors") == 0) ||
+			(strcmp(playerOne, "paper") == 0 && strcmp(playerTwo, "rock") == 0) ||
+			(strcmp(playerOne, "scissors") == 0 && strcmp(playerTwo, "paper") == 0)
 
-int RPSoption(char playerOne[MAXLEN], char playerTwo[MAXLEN]) {
+			) {
 
-	if (
+			printf("\n\nPLAYER 1 WINS!\n\n");
 
-		(strcmp(playerOne, "rock") == 0 && strcmp(playerTwo, "scissors") == 0) ||
-		(strcmp(playerOne, "paper") == 0 && strcmp(playerTwo, "rock") == 0) ||
-		(strcmp(playerOne, "scissors") == 0 && strcmp(playerTwo, "paper") == 0)
-
-		) {
-
-		printf("\n\nPLAYER 1 WINS!\n\n");
-
-		return 0;
-
-	}
-	else {
+		}
+		else {
 
 		printf("\n\nPLAYER 2 WINS!\n\n");
 
-		return 0;
-
-	}
+		}
 
 	return 0;
 
@@ -77,17 +66,8 @@ int main(void) {
 
 	}
 	
-	if (RPSEqual(playerOne, playerTwo)) {
 
-		return 0;
-
-	}
-	else {
-		
-		RPSoption(playerOne, playerTwo);
-
-		return 0;
-	}
+	RPSoption(playerOne, playerTwo);
 
 	return 0;
 
